@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+ 
+  header {
+    background-color:rgb(7, 101, 7);
+    color: beige;
+    padding: 30px; /*for padding in left and right*/
+    text-align: center;
+    font-size: 28px;
+  }
+  
+ 
+  section {
+    display: flex; /*for showing nav and article side by side horizontally*/
+  
+  }
+  
+ /*nav is working as sidebar, it contains navigation links*/
+  
+  nav {
+    
+    width: 20%;  /*will take up 20% space from left*/
+    background-color: #6b8d7c;
+    padding: 20px;
+}
+  
+  nav ul {
+    list-style-type: none;  /*to remove the bullet symbol of list*/
+  }
+  
+  nav ul li {
+    margin: 15px 0;  /*15px gap between navigation links and 0 from left*/
+  }
+  
+  nav ul li a {
+  
+    font-weight: bold;
+    color: rgb(226, 226, 204);
+  }
+  
+  nav ul li a:hover {
+    text-decoration: overline;
+  }
+  
+  
+  article {
+    width: 80%;
+    background-color: rgb(226, 226, 204);
+    padding: 20px;
+  }
+  
+  article h2 {
+    color: rgb(7, 101, 7);
+    margin-bottom: 10px;
+  }
+  
+  article ul {
+    list-style-type: square; /*instead of bullet points*/
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Responsive 
+  This is a media query — a rule that applies only when the screen is 600px or smaller (like on mobile or when you split two tabs).
+So:On big screens:nav is 30% wide (floated left)article is 70% wide (floated left)hey sit side-by-side 
+On small screens:Both are changed to width: 100% which means they stack vertically 
+  */
+  @media (max-width: 768px) {
+    section {
+      flex-direction: column;
+    }
+  
+    nav, article {
+      width: 100%;
+    }
+  }
+
+  
