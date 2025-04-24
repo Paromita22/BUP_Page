@@ -9,7 +9,10 @@
     background-color: #f4f4f4;
   }
   
- 
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
   header {
     background-color:rgb(7, 101, 7);
     color: beige;
@@ -52,10 +55,30 @@
   }
   
   
+  
   article {
     width: 80%;
-    background-color: rgb(226, 226, 204);
+    position: relative;
     padding: 20px;
+    background: url("https://bup.edu.bd/public/upload/about/202304020513.jpg") no-repeat center center/cover;
+    overflow: hidden;
+  }
+  
+  article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(8px);
+    
+    z-index: 0;
+  }
+  
+  article > * {
+    position: relative;
+    z-index: 1;
   }
   
   article h2 {
